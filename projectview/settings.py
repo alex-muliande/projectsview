@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # 'bootstrap3',
+    'rest_framework',
     'users.apps.UsersConfig',
     'crispy_forms',
     'projects.apps.ProjectsConfig',

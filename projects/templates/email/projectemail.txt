@@ -1,0 +1,3 @@
+Hello {{name}}
+
+Welcome to the Project View You will find the most amaizing projects of all times

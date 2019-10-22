@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,9 +11,53 @@
 </head>
 
 <body>
+   
+    <h1 class="h"> Welcome to my ProjectView</h1>
     <div class="container">
-        <h1> Projects viewport 2019</h1>
-    </div>
+        
+        <div class="container-fluid content">
+            <div class="row pl-2 pr-2 ml-1 mr-1">
+                {% for project_item in projects %}
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ project_item.profile }}</a>
+        
+                  </div>
+
+                <div class="col-lg-4">
+                    <div class="card-deck">
+
+                        <div class="card">
+                            <!-- Card image -->
+                            <div class="view overlay zoom">
+                                <a href="/project/{{project_item.id}}">
+                                    <img class="card-img-top" src="{{project_item.image.url}}"
+                                        alt="{{ project_item.project_name }}" height="300px">
+                                </a>
+                            </div>
+
+                            <div class="card-body pr-2 pl-2 pr-2 mr-2">
+                                <h5 class="card-title ml-4">~ {{ project_item.title }}</h5>
+
+                            </div>
+                            <div class="card-footer">
+                                <small class="dark-text ml-2 mt-2"><img
+                                        src="{{ project_item.author.profile.image.url }}" alt=""
+                                        class="rounded-circle img-fluid mr-1" style="width: 30px;">BY
+                                    {{project_item.author|upper}} <br> <small
+                                        class="ml-2 dark-text">{{project_item.created_date|timesince}}</small></small>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- end of card deck  -->
+
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
 </body>
 
 </html>
+{% endblock %}

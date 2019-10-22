@@ -52,3 +52,4 @@ class Projects(models.Model):
             raise Http404()
         return Project
 
+

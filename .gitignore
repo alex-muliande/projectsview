@@ -3,3 +3,4 @@ virtual/
 .vscode/
 instance/
 .env/
+__pycache__/

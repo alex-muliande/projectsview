@@ -176,8 +176,8 @@
                                                 </a>
                                             </div>
                                             <div class="hover-item center">
-                                                <a href="/project/{{image.title}}"
-                                                    class="bt-default white-fill large vote-now">VOTE
+                                                <a href="{%url 'review-create' project_item.id%}"
+                                                    class="bt-default white-fill size-small vote-now">VOTE
                                                     NOW</a>
                                             </div>
                                         </figure>
@@ -200,14 +200,14 @@
                                                     <div class="box-byuser js-tooltip-user">
                                                         <div class="item js-user" data-username="thecouch">
                                                             <a href="#">
-                                                                <img src="{{ user.profile.profile_picture.url}}"
+                                                                <img src="{{ project_item.author.profile.profile_picture.url}}"
                                                                     width="27" height="27" alt="user image"
                                                                     class="lazy" />
                                                             </a>
                                                         </div>
                                                         <div class="by">
                                                             by <strong><a href="/thecouch/"
-                                                                    class="text-black">{{project_item.author|upper}}</a></strong>
+                                                                    class="text-black">{{project_item.author.username|upper}}</a></strong>
                                                         </div>
                                                     </div>
                                                 </div>

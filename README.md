@@ -1,12 +1,12 @@
-### Instaclone
+### Projectsview
 ### Description
-##### Instaclone is a platform where users can display their photos for others to see, they can also see other peoples photos.They can like and comment on the post as well.
+##### Projectsview is a platform where users can display their projects for others to see, they can also  see other peoples Projects with the languages they have used. 
 ### Author
 Alex Muliande
 
 
 ### Screenshot
-<img src=" " width="1000">
+<img src="https://github.com/alex-muliande/projectsview/blob/master/Screenshot%20from%202019-10-25%2016-39-15.png" width="1000">
 
 ### Requirements
 ##### These are the requirements you need to get the project running locally on your machine:
@@ -24,11 +24,11 @@ Alex Muliande
 ##### Open the command-line and run the following command to open a directory:
   - ```cd your preferred directory``` => ```cd Desktop```
 ##### Git clone the project on your current directory by:
-  - ```git clone https://github.com/alex-muliande/Instaclone.git```.
+  - ```git clone https://github.com/alex-muliande/Projectsview.git```.
 ##### Open the project on your terminal:
   - ```atom . or code .``` , according to the type of your text editor.
 ##### Move to your project directory:
-  - ```cd Instaclone```.
+  - ```cd Projectsview```.
 ##### Install virtual environment using python:
   - ```python3.6 -m venv virtual```, check your project to confirm you have a folder called virtual,
   - then activate it by running ```source virtual/bin/activate```
@@ -50,17 +50,18 @@ Alex Muliande
 
 
 ### User Stories
-##### As a user, I would like to view different photos that interest me.
-##### As a user, I would like to click on a single photo to expand it and also view the details of the photo.
-##### As a user, I would like to search for different categories of photos.
-##### As a user, I would like to copy a link to the photo to share with my friends.
-##### As a user, I would like to view photos based on the location they were taken.
+##### As a user, I would like to view different Projects that .
+##### As a user I would like to View projects overall score
+##### As a user I would like to View my profile page
+##### As a user I would like to Rate/ review other users' projects
+##### As a user I would like Post a project to be rated/reviewed
+
 
 ### Behavior Driven Development
-##### The application should display photos.
-##### When a user clicks on a photo, the photo should expand and the details of the photo to be displayed on a modal within the main page.
+##### The application should display Projects.
+##### When a user clicks Review the  project should display apage to review that project.
 ##### When a user enters a search term on the search input and submits it, then they should be able to get a result of what they are looking for or if the term does not exist, they should get a message to inform them.
-##### When a user clicks on the copy button, then they should be able to have the image link copied to their machine clipboard.
+##### When a user click view site they should be redirect to a page with the Project of the day.
 
 ### Technologies Used
 ##### Python

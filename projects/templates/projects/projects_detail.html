@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <main role="main" class="container" id="post">
+    <br>
+    <div class="row">
+  <div class="col-md-2"></div>
+      <div class="col-md-5">
+        <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ user.profile.profile_picture.url}}" alt="hello profile_pic">
+           <!-- image data -->
+    <div class="media-body"><br>
+        <div class="article-metadata"><br><br>
+          <a class="mr-2" href="#">{{ object.profile }}</a>
+          <small class="text-muted">{{ object.date_posted|date:"F d, Y"}}</small>
+          {% if object.user == profile %}
+          <div>
+              <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+              <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+          </div>
+          {% endif%}
+        </div>
+        <h2 class="article-title">Design:{{ object.design }}</h2>
+        <h2 class="article-title">Usability:{{ object.usability }}</h2>
+        <h2 class="article-title">Creativity:{{ object.creativity }}</h2>
+        <h2 class="article-title">Content:{{ object.content }}</h2>
+        <img src="{{ object.image.url }}" class="img-responsive" height="400px" width="400px">
+        <h2 class="article-title">{{ object.description }}</h2>
+        
+      </div>
+        </article>
+      </div>
+      <div class="col-md-2"></div>
+ 
+      
+    </div>
+  </main>
+</div>
+</body>   
+</html>
+{% endblock%}

@@ -1,47 +1,105 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
+{% load bootstrap4 %}
+{% load static%}
+<html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Lobster+Two&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
-
-
-    {% if title%}
-    <title> ProjectView{{ title }}</title>
-    {% else %}
-    <title>ProjectView</title>
-    {% endif %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145844223-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-145844223-1');
+    </script>
+    <script>
+    UPLOADCARE_PUBLIC_KEY = '36a7f968cdbd63b5bcc3';
+    </script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="referrer" content="origin-when-cross-origin"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+          content="Awwwards are the Website Awards that recognize and promote the talent and effort of the best developers, designers and web agencies in the world.">
+    <link rel="canonical" href="https://www.awwwards.com/"/>
+    <meta name="theme-color" content="#3ea094">
+    <meta name="Keywords" content="Website Awards, Web Design Inspiration, Webdesign Trends">
+    <meta property="og:site_name" content="Awwwards">
+    <meta property="og:image"
+          content="https://assets.awwwards.com/assets/images/pages/about-certificates/awwwards.jpg"/>
+    <meta property="og:title" content="Awwwards - Website Awards - Best Web Design Trends"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.awwwards.com/"/>
+    <meta property="og:description"
+          content="Awwwards are the Website Awards that recognize and promote the talent and effort of the best developers, designers and web agencies in the world."/>
+    <title>Awwwards - Website Awards - Best Web Design Trends</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.awwwards.com/favicon.ico"/>
+    <link rel="manifest" href="https://www.awwwards.com/manifest.json">
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/awards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    {% endblock %}
 </head>
-
 <body>
-    {% include "navbar.html" %}
-    <div class="container">
-        {% block content %} {% endblock %}
-    </div>
-
-
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
-    </script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js">
-    </script>
+{% include 'navbar.html'%}
+{% block content %}
+{% endblock %}
 </body>
-
+{% block scripts %}
+<script src="{% static '/js/index.js'%}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://assets.awwwards.com/dist/js/vendor.13df77655f5689a9b532.js" defer></script>
+<script src="https://assets.awwwards.com/dist/js/home.2734a967c43d3d4952c9.js" defer></script>
+<script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Awwwards",
+        "url": "https://www.awwwards.com",
+        "logo": "https://assets.awwwards.com/assets/images/logo-schema.png",
+        "sameAs": [
+            "https://www.facebook.com/awwwards/",
+            "https://twitter.com/awwwards",
+            "https://www.youtube.com/channel/UCYWGYef22gx8PaXZMLHAQsw",
+            "https://www.instagram.com/awwwards/",
+            "https://www.linkedin.com/company/awwwards",
+            "https://www.pinterest.es/awwwardscom/"
+        ]
+    }
+</script>
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXD9JT" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PXD9JT');
+</script>
+<!-- End Google Tag Manager -->
+{% bootstrap_javascript %}
+{% endblock %}
 </html>

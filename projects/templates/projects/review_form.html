@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags%}
+{% block content%}
+<div class="content-section">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Review</legend>
+
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Review</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+
+{% endblock content %}

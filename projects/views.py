@@ -151,3 +151,14 @@ class ProfileList(APIView):
         all_profile = Profile.objects.all()
         serializers = ProfileSerializer(all_profile, many=True)
         return Response(serializers.data)
+
+def display_profile(request,username):
+    profile = Profile.objects.get(user__username= username)
+
+    user_projects = Projects.objects.filter(author_profile =profile).order_by('created_date')
+
+    context={
+        "profile":profile,
+        "user_projects":user_projects
+    }
+    return render(request,'profile_details.html',context)

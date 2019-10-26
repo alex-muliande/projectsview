@@ -1,11 +1,12 @@
 {% extends 'base.html'%}
 {% block content %}
+
 <body class="home" data-debug="0">
     <div class="wrapper ">
         <section id="content">
             <div class="content-view">
                 <div class="container-full alexi">
-                        <div class="box-site-head js-single-element muliande"
+                    <div class="box-site-head js-single-element muliande"
                         data-model="{&quot;likes&quot;:55,&quot;id&quot;:38186,&quot;images&quot;:{&quot;thumbnail&quot;:&quot;submissions\/2019\/10\/5da42f4e8967d075754281.jpg&quot;},&quot;slug&quot;:&quot;laguta-laguta&quot;,&quot;title&quot;:&quot;Laguta &amp; Laguta&quot;,&quot;createdAt&quot;:1571616000,&quot;tags&quot;:[&quot;Design Agencies&quot;,&quot;Mobile &amp; Apps&quot;,&quot;Web &amp; Interactive&quot;,&quot;Flat Design&quot;,&quot;Minimal&quot;,&quot;Portfolio&quot;,&quot;Responsive Design&quot;,&quot;Black&quot;,&quot;Red&quot;,&quot;White&quot;,&quot;Gallery&quot;,&quot;GSAP Animation&quot;,&quot;UI design&quot;,&quot;Nuxt.js&quot;],&quot;type&quot;:&quot;submission&quot;}">
                         <div class="box-bg has-tablet" style="height:500px;">
                             <a href="{{url.object.content }}">
@@ -112,13 +113,13 @@
                                 </div>
                                 <div class="box-bl">
                                     <a href="https://watchlist425.herokuapp.com/" data-identifier="laguta-laguta"
-                                        data-type="submission" class="js-visit-item bt-default green-fill" target="_blank"
-                                        rel="noopener nofollow">Visit
+                                        data-type="submission" class="js-visit-item bt-default green-fill"
+                                        target="_blank" rel="noopener nofollow">Visit
                                         Site</a>
-                                        <!-- <a href="profile/{{project_item.author.profile.name}}"> -->
-                                            <a href="{% url 'profile' %}">
-                                    <strong class="bt-item bt-default js-collect">Profile</strong>
-                                </a>
+                                    <!-- <a href="profile/{{project_item.author.profile.name}}"> -->
+                                    <a href="{% url 'profile' %}">
+                                        <strong class="bt-item bt-default js-collect">Profile</strong>
+                                    </a>
                                 </div>
                                 <div class="box-br">
                                     <div class="box-users-likes">
@@ -154,7 +155,7 @@
                                                         height="298" class="lazy" />
                                                 </div>
                                             </a>
-                                        
+
                                             <div class="hover-item center">
                                                 <a href="{%url 'review-create' project_item.id%}"
                                                     class="bt-default white-fill size-small vote-now">Review
@@ -186,7 +187,7 @@
                                                             </a>
                                                         </div>
                                                         <div class="by">
-                                                            by <strong><a 
+                                                            by <strong><a
                                                                     class="text-black">{{project_item.author.username|upper}}</a></strong>
                                                         </div>
                                                     </div>

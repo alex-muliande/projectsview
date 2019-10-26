@@ -14,9 +14,6 @@ class Profile(models.Model):
     def save(self,*args, **kwargs):
         super().save(*args, **kwargs)
 
-
-
-
 class Projects(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     image = models.ImageField(upload_to='profile_pics/')
@@ -77,15 +74,11 @@ class Projects(models.Model):
             return 5
         return sum([r.content for r in self.reviews.all()]) / self.reviews.count()
 
-
-
     # @property 
     # def usability(self):
     #     user = Review.objects.all().aggregate(models.Avg('usability'))['usability__avg']
     #     return user
     
-
-
 
 class Review(models.Model):
     ratings = (1, 1),(2, 2),(3, 3),(4, 4),(5, 5),(6, 6),(7, 7),(8, 8),(9, 9),(10, 10)

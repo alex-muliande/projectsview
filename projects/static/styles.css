@@ -6,7 +6,10 @@
     } */
 
 .alexi{
-    background-image: url('https://cdn.pixabay.com/photo/2019/10/24/18/36/forest-4574893_960_720.jpg');
+    background-image: url('https://pixabay.com/get/52e5d247425baf14f6d1867dda6d367d143bdfe757576c48702879d49e49c75bb1/forest-4574893_1920.jpg');
+    background-repeat: no-repeat;
+    width:100%;
+    background-position:center;
 }
 .muliande{
     opacity: 0.8;

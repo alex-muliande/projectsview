@@ -5,6 +5,16 @@
         background-color: aqua;
     } */
 
+.alexi{
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/24/18/36/forest-4574893_960_720.jpg');
+}
+.muliande{
+    opacity: 0.8;
+}
+.form-control{
+    
+    height: 30px;
+}
     * {
         margin: 0;
         padding: 0
@@ -1890,6 +1900,7 @@
         transition: all 0.3s ease-in-out;
         border-color: #202121
     }
+
     .box-site-head .bt-page {
         border-color: #fcfcfc
     }

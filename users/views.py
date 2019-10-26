@@ -1,7 +1,10 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import ListView,DetailView
 from .forms import UserRegisterForm, UserUpdateForm,ProfileUpdateForm
+from projects.models import Profile
 # Create your views here.
 def register (request):
     if request.method == 'POST':
@@ -41,4 +44,7 @@ def profile(request):
 
     return render(request, 'profile.html', context)
 
+
+class ProfileDetailView(LoginRequiredMixin, DetailView):
+   model = Profile
 
